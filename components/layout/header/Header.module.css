@@ -1,0 +1,38 @@
+.header__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 -1px 7px rgba(38, 38, 38, 0.15);
+  width: 100%;
+  background-color: #fff;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  height: 7rem;
+}
+
+.header__logo {
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.header__logo span {
+  color: var(--main-blue);
+}
+
+@media (max-width: 1200px) {
+  .header__logo {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo {
+    font-size: 2.2rem;
+  }
+}

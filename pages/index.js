@@ -7,7 +7,7 @@ const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
 });
 
 const Home = ({ data }) => {
-  return <div>Home</div>;
+  return <div style={{ height: "60vh" }}>Home</div>;
 };
 
 export default Home;

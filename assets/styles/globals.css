@@ -7,9 +7,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --main-blue: #243b95;
+  --main-blue: #3b5bda;
   --main-black: #141414;
   --main-gray: #ededed;
+  --secondary-gray: #efefef;
+  --dark-gray: #7e7e7e;
+  --main-white: #fdfefe;
+  --secondary-white: #f6f7f6;
 }
 
 * {
@@ -25,14 +29,16 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   margin-top: 7rem;
-  height: 200vh;
-  background-color: red;
   line-height: 1;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: var(--main-black);
+}
+
+ul {
+  list-style: none;
 }
 
 button {
@@ -42,7 +48,7 @@ button {
 
 .container {
   margin: 0 auto;
-  max-width: 128rem;
+  max-width: 160rem;
   padding: 0 4.8rem;
 }
 

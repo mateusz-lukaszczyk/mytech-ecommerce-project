@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HiMenuAlt3, HiShoppingCart, HiXCircle } from "react-icons/hi";
+import { navLinks } from "../../../utils/constants";
 import MenuOverlay from "../menuOverlay/MenuOverlay";
 import styles from "./Navbar.module.css";
 
@@ -12,25 +13,20 @@ const Navbar = () => {
       <div className={`${styles.nav__menu} ${menuOpen && styles.menu__active}`}>
         <span className={styles.nav__menu__name}>Menu</span>
         <ul className={styles.nav__list}>
-          <li className={styles.nav__list__element}>
-            <Link
-              className={styles.nav__list__link}
-              href="/"
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li className={styles.nav__list__element}>
-            <Link className={styles.nav__list__link} href="/products">
-              Products
-            </Link>
-          </li>
-          <li className={styles.nav__list__element}>
-            <Link className={styles.nav__list__link} href="/contact">
-              Contact
-            </Link>
-          </li>
+          {navLinks.map((link) => {
+            const { text, url } = link;
+            return (
+              <li className={styles.nav__list__element}>
+                <Link
+                  href={url}
+                  className={styles.nav__list__link}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {text}
+                </Link>
+              </li>
+            );
+          })}
           <HiXCircle
             className={styles.header__close}
             onClick={() => setMenuOpen(false)}

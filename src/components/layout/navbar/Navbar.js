@@ -6,11 +6,13 @@ import MenuOverlay from "../menuOverlay/MenuOverlay";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className={styles.header__navbar}>
-      <div className={`${styles.nav__menu} ${menuOpen && styles.menu__active}`}>
+      <div
+        className={`${styles.nav__menu} ${isMenuOpen && styles.menu__active}`}
+      >
         <span className={styles.nav__menu__name}>Menu</span>
         <ul className={styles.nav__list}>
           {navLinks.map((link) => {
@@ -20,7 +22,7 @@ const Navbar = () => {
                 <Link
                   href={url}
                   className={styles.nav__list__link}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {text}
                 </Link>
@@ -29,7 +31,7 @@ const Navbar = () => {
           })}
           <HiXCircle
             className={styles.header__close}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setIsMenuOpen(false)}
           />
         </ul>
       </div>
@@ -44,10 +46,10 @@ const Navbar = () => {
         <div className={styles.divider}></div>
         <HiMenuAlt3
           className={styles.header__menu}
-          onClick={() => setMenuOpen(true)}
+          onClick={() => setIsMenuOpen(true)}
         />
       </div>
-      <MenuOverlay menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <MenuOverlay isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </nav>
   );
 };

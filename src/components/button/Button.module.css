@@ -1,0 +1,17 @@
+.button {
+  transition: 0.8s;
+  padding: 1.5rem 2rem;
+  background-image: linear-gradient(
+    325deg,
+    var(--second-blue) 0%,
+    var(--main-blue) 55%,
+    var(--main-blue) 90%
+  );
+  background-size: 280% auto;
+  font-size: 1.6rem;
+  color: var(--main-white);
+}
+
+.button:hover {
+  background-position: right top;
+}

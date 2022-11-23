@@ -14,7 +14,7 @@
   font-size: 3.6rem;
   font-weight: 700;
   text-decoration: none;
-  color: var(--main-white);
+  color: var(--secondary-gray);
 }
 
 .footer__logo span {

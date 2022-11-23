@@ -16,9 +16,9 @@ const Navbar = () => {
         <span className={styles.nav__menu__name}>Menu</span>
         <ul className={styles.nav__list}>
           {navLinks.map((link) => {
-            const { text, url } = link;
+            const { id, text, url } = link;
             return (
-              <li className={styles.nav__list__element}>
+              <li className={styles.nav__list__element} key={id}>
                 <Link
                   href={url}
                   className={styles.nav__list__link}

@@ -7,7 +7,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --main-blue: #3b5bda;
+  --main-blue: #3cacbf;
+  --second-blue: #7de5ed;
   --main-black: #141414;
   --main-gray: #ededed;
   --secondary-gray: #efefef;

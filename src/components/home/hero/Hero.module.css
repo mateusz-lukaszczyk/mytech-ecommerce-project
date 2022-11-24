@@ -7,27 +7,26 @@
 }
 
 .hero__content {
-  gap: 1.5rem;
-  flex-direction: column;
-  display: flex;
   padding-top: 20rem;
   text-align: left;
 }
 
 .hero__content__heading {
+  margin-bottom: 1.5rem;
   font-size: 5.5rem;
   text-transform: uppercase;
   color: var(--secondary-gray);
 }
 
 .hero__content__subheading {
+  margin-bottom: 1.5rem;
   font-size: 3.5rem;
   font-weight: 600;
   color: var(--main-blue);
 }
 
 .hero__content__description {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   max-width: 50rem;
   font-size: 1.6rem;
   line-height: 1.4;
@@ -92,11 +91,11 @@
 }
 
 @media (max-width: 480px) {
-  .hero__content__heading {
-    font-size: 3rem;
-  }
-
   .hero {
     height: 40vh;
+  }
+
+  .hero__content__heading {
+    font-size: 3rem;
   }
 }

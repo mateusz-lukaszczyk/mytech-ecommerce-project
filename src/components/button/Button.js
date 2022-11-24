@@ -1,11 +1,11 @@
 import Link from "next/link";
 import styles from "./Button.module.css";
 
-const Button = ({ buttonText }) => {
+const Button = ({ ...props }) => {
   return (
     <div>
       <Link href="/products">
-        <button className={styles.button}>{buttonText}</button>
+        <button className={styles.button}>{props.buttonText}</button>
       </Link>
     </div>
   );

@@ -1,0 +1,119 @@
+.productsBanner {
+  background-color: var(--secondary-gray);
+}
+
+.productsBanner__content {
+  gap: 4rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  padding: 4.8rem;
+  text-align: left;
+}
+
+.productsBanner__box {
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
+  background-color: #fff;
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.productsBanner__box__wrapper {
+  padding: 6rem 0 6rem 4rem;
+}
+
+.productsBanner__box__heading {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+.productsBanner__box__subheading {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.productsBanner__box__description {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--main-blue);
+}
+
+.productsBanner__box__image {
+  align-self: center;
+  justify-self: center;
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 1300px) {
+  .productsBanner__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 940px) {
+  .productsBanner__content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .productsBanner__box {
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+  }
+
+  .productsBanner__box__wrapper {
+    padding: 2rem;
+  }
+
+  .productsBanner__box__heading {
+    font-size: 2.2rem;
+  }
+
+  .productsBanner__box__subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .productsBanner__box__description {
+    font-size: 1.2rem;
+  }
+
+  .productsBanner__box__image {
+    width: 150px;
+  }
+}
+
+@media (max-width: 748px) {
+  .productsBanner__content {
+    grid-template-columns: 1fr 1fr;
+    padding: 4.8rem 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productsBanner__content {
+    grid-template-columns: 1fr;
+    padding: 4.8rem 2.4rem;
+  }
+
+  .productsBanner__box {
+    justify-self: center;
+    width: 250px;
+  }
+
+  .productsBanner__box__wrapper {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .productsBanner__box {
+    justify-self: center;
+    width: 200px;
+  }
+}

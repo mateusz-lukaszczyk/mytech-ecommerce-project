@@ -15,7 +15,7 @@ const Hero = () => {
             culpa, praesentium tempore.
           </p>
         </div>
-        <Button buttonText="Shop now" />
+        <Button buttonText="Discover" />
       </div>
     </section>
   );

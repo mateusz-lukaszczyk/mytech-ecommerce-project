@@ -1,5 +1,6 @@
 import { gql, GraphQLClient } from "graphql-request";
 import Hero from "../components/home/hero/Hero";
+import ProductsBanner from "../components/home/productsBanner/ProductsBanner";
 
 const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
   headers: {
@@ -11,6 +12,7 @@ const Home = ({ data }) => {
   return (
     <main>
       <Hero />
+      <ProductsBanner />
     </main>
   );
 };

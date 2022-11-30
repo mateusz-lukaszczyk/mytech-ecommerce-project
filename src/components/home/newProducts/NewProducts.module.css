@@ -1,0 +1,27 @@
+.newProducts__wrapper {
+  padding: 4.8rem;
+}
+
+.newProducts__headings {
+  text-align: center;
+}
+
+.newProducts__heading {
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--main-black);
+}
+
+.newProducts__description {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: var(--dark-gray);
+}
+
+.newProducts__arrow {
+  margin-bottom: 2.4rem;
+  width: 70px;
+  height: auto;
+}

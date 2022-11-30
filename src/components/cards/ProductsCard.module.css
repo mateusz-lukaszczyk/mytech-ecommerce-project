@@ -1,0 +1,117 @@
+.newProductsCard__box {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 229px;
+  padding: 1.5rem;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  background-color: var(--secondary-white);
+  text-align: center;
+}
+
+.newProductsCard__title {
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--main-black);
+}
+
+.newProductsCard__price {
+  font-size: 1.6rem;
+  color: var(--main-black);
+}
+
+.reviews__stars {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80px;
+  height: auto;
+}
+
+.button {
+  transition: 0.8s;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(
+    325deg,
+    var(--second-blue) 0%,
+    var(--main-blue) 55%,
+    var(--main-blue) 90%
+  );
+  background-size: 280% auto;
+  font-size: 1.6rem;
+  color: var(--main-white);
+}
+
+.button:hover {
+  background-position: right top;
+}
+
+.newProductsCard__icon {
+  margin-right: 0.4rem;
+  vertical-align: top;
+}
+
+.newProductsCard__arrow {
+  position: absolute;
+  bottom: -30%;
+  left: -100%;
+  transition: 0.3s;
+  width: 50px;
+  height: auto;
+}
+
+.newProductsCard__box:hover .newProductsCard__arrow {
+  bottom: 0%;
+  left: -3%;
+}
+
+.newProductsCard__new__tag {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  padding: 0.5rem 1.4rem;
+  background-color: var(--main-yellow);
+  font-size: 1.3rem;
+  font-weight: 500;
+  box-shadow: rgba(60, 172, 191, 0.2) 5px 5px;
+  color: var(--main-black);
+}
+
+.newProductsCard__sale__tag {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  padding: 0.5rem 1.4rem;
+  background-color: var(--main-red);
+  font-size: 1.3rem;
+  font-weight: 500;
+  box-shadow: rgba(60, 172, 191, 0.2) 5px 5px;
+  color: var(--main-white);
+}
+
+.newProductsCard__regular__tag {
+  display: none;
+}
+
+@media (max-width: 1202px) {
+  .newProductsCard__image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 1.4rem;
+  }
+
+  .newProductsCard__box:hover .newProductsCard__arrow {
+    left: -7%;
+    bottom: 0%;
+  }
+}

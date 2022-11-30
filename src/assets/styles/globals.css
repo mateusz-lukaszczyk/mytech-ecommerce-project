@@ -15,6 +15,8 @@
   --dark-gray: #7e7e7e;
   --main-white: #fdfefe;
   --secondary-white: #f6f7f6;
+  --main-yellow: #facd05;
+  --main-red: #d51243;
 }
 
 * {
@@ -51,6 +53,14 @@ button {
   margin: 0 auto;
   max-width: 144rem;
   padding: 0 4.8rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  border: 1px solid rgb(60, 172, 191, 0.5);
+  padding: 1.3rem;
+  background-color: var(--main-white) !important;
+  color: var(--main-black) !important;
 }
 
 @media (max-width: 480px) {

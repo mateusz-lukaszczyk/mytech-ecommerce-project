@@ -1,21 +1,20 @@
-.productsBanner {
-  background-color: var(--secondary-gray);
-}
-
 .productsBanner__content {
   gap: 4rem;
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   padding: 4.8rem;
   text-align: left;
+  background-color: var(--secondary-gray);
 }
 
 .productsBanner__box {
+  position: relative;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
   display: grid;
   overflow: hidden;
-  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   background-color: #fff;
   text-decoration: none;
   color: var(--main-black);
@@ -39,7 +38,7 @@
 .productsBanner__box__description {
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
-  color: var(--main-blue);
+  color: var(--dark-gray);
 }
 
 .productsBanner__box__image {
@@ -47,6 +46,20 @@
   justify-self: center;
   width: 200px;
   height: auto;
+}
+
+.productsBanner__box__arrow {
+  position: absolute;
+  bottom: -100%;
+  left: -100%;
+  transition: 0.3s;
+  width: 90px;
+  height: auto;
+}
+
+.productsBanner__box:hover .productsBanner__box__arrow {
+  bottom: 2%;
+  left: -5%;
 }
 
 @media (max-width: 1300px) {
@@ -86,12 +99,31 @@
   .productsBanner__box__image {
     width: 150px;
   }
+
+  .productsBanner__box__arrow {
+    width: 70px;
+  }
+
+  .productsBanner__box:hover .productsBanner__box__arrow {
+    top: 33%;
+    left: -5%;
+  }
 }
 
 @media (max-width: 748px) {
   .productsBanner__content {
     grid-template-columns: 1fr 1fr;
     padding: 4.8rem 2.4rem;
+  }
+
+  .productsBanner__box:hover .productsBanner__box__arrow {
+    top: 33%;
+    left: 0%;
+  }
+
+  .productsBanner__box {
+    justify-self: center;
+    width: 200px;
   }
 }
 

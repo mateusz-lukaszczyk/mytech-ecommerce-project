@@ -1,6 +1,4 @@
-import { gql, GraphQLClient } from "graphql-request";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -10,135 +8,8 @@ import arrow from "../../../assets/images/arrow2.png";
 import ProductsCard from "../../cards/ProductsCard";
 import styles from "./NewProducts.module.css";
 
-const hygraph = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT, {
-  headers: {
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_HYGRAPH_TOKEN}`,
-  },
-});
-
-const query = gql`
-  {
-    cPUs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    gPUs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    aUDIOs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    vIDEOs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    vIDEOs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-    }
-
-    cOMPUTERs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    gAMINGs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    lAPTOPs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    sMARTWATCHs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-  }
-`;
-
-const NewProducts = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function getNewProducts() {
-      const data = await hygraph.request(query);
-      setData(data);
-    }
-    getNewProducts();
-  }, []);
-
-  const newProductsArr = Object.values(data);
+const NewProducts = ({ newProductsData }) => {
+  const newProductsArr = Object.values(newProductsData);
 
   const getValues = () => {
     let dataArray = [];
@@ -161,7 +32,7 @@ const NewProducts = () => {
     return dataArray;
   };
 
-  const newProductsData = getValues();
+  const newProductsFinalData = getValues();
 
   return (
     <div className={`${styles.newProducts__wrapper} container`}>
@@ -208,7 +79,7 @@ const NewProducts = () => {
         }}
         className="mySwiper"
       >
-        {newProductsData.map((item) => {
+        {newProductsFinalData.map((item) => {
           return (
             <SwiperSlide key={item.id}>
               <ProductsCard

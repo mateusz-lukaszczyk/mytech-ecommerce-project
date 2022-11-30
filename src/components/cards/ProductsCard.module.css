@@ -31,31 +31,6 @@
   height: auto;
 }
 
-.button {
-  transition: 0.8s;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-image: linear-gradient(
-    325deg,
-    var(--second-blue) 0%,
-    var(--main-blue) 55%,
-    var(--main-blue) 90%
-  );
-  background-size: 280% auto;
-  font-size: 1.6rem;
-  color: var(--main-white);
-}
-
-.button:hover {
-  background-position: right top;
-}
-
-.newProductsCard__icon {
-  margin-right: 0.4rem;
-  vertical-align: top;
-}
-
 .newProductsCard__arrow {
   position: absolute;
   bottom: -30%;
@@ -106,10 +81,6 @@
 }
 
 @media (max-width: 768px) {
-  .button {
-    font-size: 1.4rem;
-  }
-
   .newProductsCard__box:hover .newProductsCard__arrow {
     left: -7%;
     bottom: 0%;

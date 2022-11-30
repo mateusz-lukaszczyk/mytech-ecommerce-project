@@ -1,0 +1,61 @@
+.dealBanner__background {
+  height: 50vh;
+  background-image: url(../../../assets/images/deal-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.dealBanner__content {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.background__price {
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  right: -50%;
+  font-weight: 700;
+  opacity: 0.3;
+  z-index: -1;
+  color: #c4c4c4;
+  font-size: 12rem;
+}
+
+.reviews__stars {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  width: 80px;
+  height: auto;
+}
+
+.dealBanner__subheading {
+  color: var(--dark-gray);
+  font-size: 2rem;
+}
+
+.dealBanner__title {
+  color: var(--main-black);
+  font-size: 3rem;
+}
+
+.dealBanner__description {
+  color: var(--dark-gray);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.dealBanner__price {
+  font-size: 3.5rem;
+  color: var(--main-blue);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

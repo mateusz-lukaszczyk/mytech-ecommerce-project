@@ -1,4 +1,4 @@
-import Button from "../../buttons/Button";
+import Button from "../../buttons/button/Button";
 import styles from "./Hero.module.css";
 
 const Hero = () => {

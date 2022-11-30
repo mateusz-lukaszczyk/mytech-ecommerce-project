@@ -1,3 +1,4 @@
+import DealBanner from "../components/home/dealBanner/DealBanner";
 import Hero from "../components/home/hero/Hero";
 import NewProducts from "../components/home/newProducts/NewProducts";
 import ProductsBanner from "../components/home/productsBanner/ProductsBanner";
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <ProductsBanner />
       <NewProducts />
+      <DealBanner />
     </main>
   );
 };

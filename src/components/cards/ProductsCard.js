@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HiShoppingCart } from "react-icons/hi";
 import arrow from "../../assets/images/arrow.png";
 import stars from "../../assets/images/stars.png";
+import ButtonAddCart from "../buttons/buttonAddCart/ButtonAddCart";
 import styles from "./ProductsCard.module.css";
 
 const ProductsCard = ({ title, price, slug, image, statusNew, statusSale }) => {
@@ -12,26 +12,28 @@ const ProductsCard = ({ title, price, slug, image, statusNew, statusSale }) => {
   price = insertDecimal(price);
 
   return (
-    <Link href={slug} style={{ textDecoration: "none" }}>
+    <div>
       <div className={styles.newProductsCard__box}>
-        <h1 className={styles.newProductsCard__title}>{title}</h1>
-        <Image
-          className={styles.newProductsCard__image}
-          src={image}
-          alt={title}
-          width={200}
-          height={200}
-        />
+        <Link href={slug} style={{ textDecoration: "none" }}>
+          <h1 className={styles.newProductsCard__title}>{title}</h1>
+        </Link>
+        <Link href={slug} style={{ textDecoration: "none" }}>
+          <Image
+            className={styles.newProductsCard__image}
+            src={image}
+            alt={title}
+            width={200}
+            height={200}
+          />
+        </Link>
         <Image
           src={stars}
           className={styles.reviews__stars}
           alt="reviews stars"
         />
         <p className={styles.newProductsCard__price}>${price}</p>
-        <button className={styles.button}>
-          <HiShoppingCart className={styles.newProductsCard__icon} />
-          Add to cart
-        </button>
+        <ButtonAddCart />
+
         <Image
           className={styles.newProductsCard__arrow}
           src={arrow}
@@ -49,7 +51,7 @@ const ProductsCard = ({ title, price, slug, image, statusNew, statusSale }) => {
           {statusNew ? "NEW" : statusSale ? "ON SALE" : ""}
         </span>
       </div>
-    </Link>
+    </div>
   );
 };
 

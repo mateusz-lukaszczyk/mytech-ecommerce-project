@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import arrow from "../../../assets/images/arrow.png";
 import stars from "../../../assets/images/stars.png";
+import { insertDecimal } from "../../../utils/constants";
 import { ButtonAddCart } from "../../buttons/buttonAddCart/ButtonAddCart";
 import styles from "./ProductCard.module.css";
 
@@ -13,9 +14,6 @@ export const ProductCard = ({
   isProductNew,
   isProductSale,
 }) => {
-  const insertDecimal = (num) => {
-    return (num / 100).toFixed(2);
-  };
   price = insertDecimal(price);
 
   return (
@@ -53,7 +51,7 @@ export const ProductCard = ({
             : styles.new__products__card__regular__tag
         }
       >
-        {isProductNew ? "NEW" : isProductSale ? "ON SALE" : ""}
+        {isProductNew ? "NEW" : isProductSale && "ON SALE"}
       </span>
     </div>
   );

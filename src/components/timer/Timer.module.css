@@ -1,4 +1,14 @@
-.test {
-  border: 1px solid black;
-  padding: 1rem 2rem;
+.timer {
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 0.7rem 0rem;
+  max-width: 140px;
+  margin: 0 auto;
+  border: 1px solid var(--main-blue);
+}
+
+.timer__icon {
+  transform: translateY(1px);
+  font-size: 1.8rem;
 }

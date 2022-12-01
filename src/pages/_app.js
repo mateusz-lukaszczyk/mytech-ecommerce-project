@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "../assets/styles/globals.css";
 import { Layout } from "../components/layout/Layout";
-import Loader from "../components/loader/Loader";
+import { Loader } from "../components/loader/Loader";
 
 function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false);

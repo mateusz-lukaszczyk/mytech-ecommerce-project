@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import arrow from "../../../assets/images/arrow2.png";
+import arrow from "../../../assets/images/arrow.png";
 import { ProductCard } from "../card/ProductCard";
 import styles from "./NewProducts.module.css";
 
@@ -13,7 +13,7 @@ export const NewProducts = ({ newProductsData }) => {
     let dataArray = [];
     let dataObject = {};
 
-    Object.values(newProductsData).map((item) => {
+    Object.values(newProductsData).forEach((item) => {
       item.map((element) => {
         dataObject.title = element.title;
         dataObject.price = element.price;

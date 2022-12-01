@@ -56,7 +56,7 @@
   color: var(--main-black);
 }
 
-.newProductsCard__sale__tag {
+.new__products__card__sale__tag {
   position: absolute;
   top: 15%;
   left: 2%;

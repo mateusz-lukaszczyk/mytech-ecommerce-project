@@ -25,11 +25,11 @@
   opacity: 0.3;
   z-index: -1;
   color: #c4c4c4;
-  font-size: 12rem;
+  font-size: 10rem;
 }
 
 .reviews__stars {
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   width: 80px;
   height: auto;
@@ -49,13 +49,115 @@
   color: var(--dark-gray);
   font-size: 1.4rem;
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .deal__banner__price {
-  font-size: 3.5rem;
+  position: relative;
+  font-size: 2.5rem;
   color: var(--main-blue);
   margin-top: 1rem;
+  font-weight: 600;
   margin-bottom: 1rem;
+}
+
+.deal__banner__discount {
+  font-size: 1.5rem;
+  color: var(--main-red);
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.deal__banner__old__price__content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.deal__banner__old__price {
+  color: var(--main-black);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.deal__banner__arrow {
+  position: absolute;
+  bottom: 18%;
+  left: -30%;
+  width: 100px;
+  transform: rotate(50deg);
+  height: auto;
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .deal__banner__background {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .deal__banner__background {
+    background-position: 60%;
+  }
+
+  .deal__banner__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .deal__banner__subheading {
+    font-size: 1.5rem;
+  }
+
+  .reviews__stars {
+    width: 60px;
+  }
+
+  .deal__banner__title {
+    font-size: 2.2rem;
+  }
+
+  .deal__banner__description {
+    font-size: 1.3rem;
+  }
+
+  .deal__banner__price {
+    font-size: 2rem;
+  }
+
+  .deal__banner__discount {
+    font-size: 1.3rem;
+  }
+
+  .deal__banner__old__price {
+    font-size: 1.3rem;
+  }
+
+  .deal__banner__arrow {
+    left: -20%;
+    width: 80px;
+  }
+
+  .background__price {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .deal__banner__arrow {
+    left: -30%;
+    width: 70px;
+  }
+
+  .deal__banner__background {
+    background-position: 55%;
+  }
+
+  .background__price {
+    font-size: 5rem;
+  }
 }

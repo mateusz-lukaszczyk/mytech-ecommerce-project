@@ -15,3 +15,7 @@ export const navLinks = [
     url: "/contact",
   },
 ];
+
+export const insertDecimal = (num) => {
+  return (num / 100).toFixed(2);
+};

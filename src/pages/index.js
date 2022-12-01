@@ -9,6 +9,7 @@ import { Hero } from "../components/home/hero/Hero";
 import { DealBanner } from "../components/product/dealBanner/DealBanner";
 import { NewProducts } from "../components/product/newProducts/NewProducts";
 import { ProductsBanner } from "../components/product/productsBanner/ProductsBanner";
+import { dealBannerQuery } from "../utils/queries/dealBannerQuery";
 import { newProductQuery } from "../utils/queries/newProductQuery";
 
 const hygraph = new GraphQLClient(process.env.HYGRAPH_ENDPOINT, {
@@ -17,12 +18,12 @@ const hygraph = new GraphQLClient(process.env.HYGRAPH_ENDPOINT, {
   },
 });
 
-const Home = ({ newProductsData }) => (
+const Home = ({ newProductsData, dealBannerData }) => (
   <div>
     <Hero />
     <ProductsBanner />
     <NewProducts newProductsData={newProductsData} />
-    <DealBanner />
+    <DealBanner dealBannerData={dealBannerData} />
   </div>
 );
 
@@ -30,10 +31,12 @@ export default Home;
 
 export async function getServerSideProps() {
   const newProductsData = await hygraph.request(newProductQuery);
+  const dealBannerData = await hygraph.request(dealBannerQuery);
 
   return {
     props: {
       newProductsData: newProductsData,
+      dealBannerData: dealBannerData,
     },
   };
 }

@@ -1,56 +1,6 @@
 import { useEffect, useState } from "react";
-// import styles from "./Timer.module.css";
-
-// const Timer = () => {
-//   const calculateTimeLeft = () => {
-//     let year = new Date().getFullYear();
-//     const difference = +new Date(`${year}-12-31`) - +new Date();
-//     let timeLeft = {};
-
-//     if (difference > 0) {
-//       timeLeft = {
-//         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-//         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-//         minutes: Math.floor((difference / 1000 / 60) % 60),
-//         seconds: Math.floor((difference / 1000) % 60),
-//       };
-//     }
-
-//     return timeLeft;
-//   };
-
-//   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-//   useEffect(() => {
-//     setTimeout(() => {
-//       setTimeLeft(calculateTimeLeft());
-//     }, 1000);
-//   });
-
-//   const timerComponents = [];
-
-//   Object.keys(timeLeft).forEach((interval) => {
-//     if (!timeLeft[interval]) {
-//       return;
-//     }
-
-//     timerComponents.push(
-//       <span>
-//         {interval}
-//         {":"} {timeLeft[interval]}
-//         {" ------ "}
-//       </span>
-//     );
-//     console.log(timerComponents);
-//   });
-//   return (
-//     <div className={styles.test}>
-//       {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-//     </div>
-//   );
-// };
-
-// export default Timer;
+import { TfiAlarmClock } from "react-icons/tfi";
+import styles from "./Timer.module.css";
 
 export const Timer = () => {
   const [time, setTime] = useState(2 * 24 * 60 * 60 * 1000);
@@ -60,5 +10,22 @@ export const Timer = () => {
       setTime(time - 1000);
     }, 1000);
   }, [time]);
-  return <div>{time}</div>;
+
+  const getFormattedTime = (milliseconds) => {
+    let totalSeconds = parseInt(Math.floor(milliseconds / 1000));
+    let totalMinutes = parseInt(Math.floor(totalSeconds / 60));
+    let totalHours = parseInt(Math.floor(totalMinutes / 60));
+    let days = parseInt(Math.floor(totalHours / 24));
+    let seconds = parseInt(totalSeconds % 60);
+    let minutes = parseInt(totalMinutes % 60);
+    let hours = parseInt(totalHours % 24);
+
+    return `${days}: ${hours}: ${minutes}: ${seconds}`;
+  };
+
+  return (
+    <div className={styles.timer}>
+      <TfiAlarmClock className={styles.timer__icon} /> {getFormattedTime(time)}
+    </div>
+  );
 };

@@ -2,6 +2,7 @@
   transition: 0.8s;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border: none;
   padding: 1rem;
   background-image: linear-gradient(
     325deg,
@@ -10,6 +11,7 @@
     var(--main-blue) 90%
   );
   background-size: 280% auto;
+  cursor: pointer;
   font-size: 1.6rem;
   color: var(--main-white);
 }

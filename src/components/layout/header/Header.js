@@ -1,19 +1,14 @@
 import Link from "next/link";
-import Navbar from "../navbar/Navbar";
 import styles from "./Header.module.css";
+import { Navbar } from "./navbar/Navbar";
 
-const Header = () => {
-  return (
-    <div className={styles.header__wrapper}>
-      <div className={`${styles.header} container`}>
-        <Link href="/" className={styles.header__logo}>
-          myTech<span>.</span>
-        </Link>
-
-        <Navbar />
-      </div>
+export const Header = () => (
+  <header className={styles.header__wrapper}>
+    <div className={`${styles.header} container`}>
+      <Link href="/" className={styles.header__logo}>
+        myTech<span>.</span>
+      </Link>
+      <Navbar />
     </div>
-  );
-};
-
-export default Header;
+  </header>
+);

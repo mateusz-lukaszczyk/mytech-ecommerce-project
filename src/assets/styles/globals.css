@@ -4,8 +4,6 @@
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
 :root {
   --main-blue: #3cacbf;
   --second-blue: #7de5ed;
@@ -33,20 +31,10 @@ html {
 
 body {
   overflow: hidden;
-  margin-top: 7rem;
   line-height: 1;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: var(--main-black);
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  border: none;
-  cursor: pointer;
 }
 
 .container {

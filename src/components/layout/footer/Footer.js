@@ -7,7 +7,7 @@ import cardThree from "../../../assets/images/footer-card-3.png";
 import cardFour from "../../../assets/images/footer-card-4.png";
 import styles from "./Footer.module.css";
 
-const Footer = () => {
+export const Footer = () => {
   let date = new Date().getFullYear();
 
   return (
@@ -120,5 +120,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

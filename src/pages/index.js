@@ -1,8 +1,15 @@
-import { gql, GraphQLClient } from "graphql-request";
-import DealBanner from "../components/home/dealBanner/DealBanner";
-import Hero from "../components/home/hero/Hero";
-import NewProducts from "../components/home/newProducts/NewProducts";
-import ProductsBanner from "../components/home/productsBanner/ProductsBanner";
+import "@fontsource/poppins";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import { GraphQLClient } from "graphql-request";
+import { Hero } from "../components/home/hero/Hero";
+import { DealBanner } from "../components/product/dealBanner/DealBanner";
+import { NewProducts } from "../components/product/newProducts/NewProducts";
+import { ProductsBanner } from "../components/product/productsBanner/ProductsBanner";
+import { newProductQuery } from "../utils/queries/newProductQuery";
 
 const hygraph = new GraphQLClient(process.env.HYGRAPH_ENDPOINT, {
   headers: {
@@ -10,132 +17,19 @@ const hygraph = new GraphQLClient(process.env.HYGRAPH_ENDPOINT, {
   },
 });
 
-const Home = ({ newProductsData }) => {
-  return (
-    <main>
-      <Hero />
-      <ProductsBanner />
-      <NewProducts newProductsData={newProductsData} />
-      <DealBanner />
-    </main>
-  );
-};
+const Home = ({ newProductsData }) => (
+  <div>
+    <Hero />
+    <ProductsBanner />
+    <NewProducts newProductsData={newProductsData} />
+    <DealBanner />
+  </div>
+);
 
 export default Home;
 
-const query = gql`
-  {
-    cPUs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    gPUs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    aUDIOs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    vIDEOs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    vIDEOs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-    }
-
-    cOMPUTERs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    gAMINGs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    lAPTOPs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-
-    sMARTWATCHs(where: { newProduct: true }) {
-      id
-      images {
-        url
-      }
-      price
-      slug
-      title
-      brand
-      newProduct
-    }
-  }
-`;
-
 export async function getServerSideProps() {
-  const newProductsData = await hygraph.request(query);
+  const newProductsData = await hygraph.request(newProductQuery);
 
   return {
     props: {

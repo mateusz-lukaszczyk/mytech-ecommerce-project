@@ -1,5 +1,6 @@
 .button {
   transition: 0.8s;
+  border: none;
   padding: 1.5rem 2rem;
   background-image: linear-gradient(
     325deg,
@@ -8,6 +9,7 @@
     var(--main-blue) 90%
   );
   background-size: 280% auto;
+  cursor: pointer;
   font-size: 1.6rem;
   color: var(--main-white);
 }

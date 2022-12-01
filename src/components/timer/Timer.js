@@ -52,7 +52,7 @@ import { useEffect, useState } from "react";
 
 // export default Timer;
 
-const Timer = () => {
+export const Timer = () => {
   const [time, setTime] = useState(2 * 24 * 60 * 60 * 1000);
 
   useEffect(() => {
@@ -62,5 +62,3 @@ const Timer = () => {
   }, [time]);
   return <div>{time}</div>;
 };
-
-export default Timer;

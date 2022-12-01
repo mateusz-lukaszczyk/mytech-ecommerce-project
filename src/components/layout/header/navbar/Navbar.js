@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HiMenuAlt3, HiShoppingCart, HiXCircle } from "react-icons/hi";
-import { navLinks } from "../../../utils/constants";
-import MenuOverlay from "../menuOverlay/MenuOverlay";
+import { navLinks } from "../../../../utils/constants";
+import { MenuOverlay } from "../../menuOverlay/MenuOverlay";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -53,5 +53,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

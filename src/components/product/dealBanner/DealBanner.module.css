@@ -1,4 +1,4 @@
-.dealBanner__background {
+.deal__banner__background {
   height: 50vh;
   background-image: url(../../../assets/images/deal-banner.jpg);
   background-position: center;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.dealBanner__content {
+.deal__banner__content {
   position: absolute;
   top: 50%;
   left: 70%;
@@ -35,17 +35,17 @@
   height: auto;
 }
 
-.dealBanner__subheading {
+.deal__banner__subheading {
   color: var(--dark-gray);
   font-size: 2rem;
 }
 
-.dealBanner__title {
+.deal__banner__title {
   color: var(--main-black);
   font-size: 3rem;
 }
 
-.dealBanner__description {
+.deal__banner__description {
   color: var(--dark-gray);
   font-size: 1.4rem;
   font-weight: 500;
@@ -53,7 +53,7 @@
   margin-bottom: 2rem;
 }
 
-.dealBanner__price {
+.deal__banner__price {
   font-size: 3.5rem;
   color: var(--main-blue);
   margin-top: 1rem;

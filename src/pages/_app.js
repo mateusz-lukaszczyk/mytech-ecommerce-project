@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "../assets/styles/globals.css";
-import Layout from "../components/layout/Layout";
+import { Layout } from "../components/layout/Layout";
 import Loader from "../components/loader/Loader";
 
 function MyApp({ Component, pageProps }) {

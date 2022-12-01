@@ -1,4 +1,4 @@
-.productsBanner__content {
+.products__banner__content {
   gap: 4rem;
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
@@ -7,7 +7,7 @@
   background-color: var(--secondary-gray);
 }
 
-.productsBanner__box {
+.products__banner__box {
   position: relative;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
@@ -20,35 +20,35 @@
   color: var(--main-black);
 }
 
-.productsBanner__box__wrapper {
+.products__banner__box__wrapper {
   padding: 6rem 0 6rem 4rem;
 }
 
-.productsBanner__box__heading {
+.products__banner__box__heading {
   margin-bottom: 1.5rem;
   font-size: 3rem;
 }
 
-.productsBanner__box__subheading {
+.products__banner__box__subheading {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 400;
 }
 
-.productsBanner__box__description {
+.products__banner__box__description {
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
   color: var(--dark-gray);
 }
 
-.productsBanner__box__image {
+.products__banner__box__image {
   align-self: center;
   justify-self: center;
   width: 200px;
   height: auto;
 }
 
-.productsBanner__box__arrow {
+.products__banner__box__arrow {
   position: absolute;
   bottom: -100%;
   left: -100%;
@@ -57,94 +57,94 @@
   height: auto;
 }
 
-.productsBanner__box:hover .productsBanner__box__arrow {
+.products__banner__box:hover .products__banner__box__arrow {
   bottom: 2%;
   left: -5%;
 }
 
 @media (max-width: 1300px) {
-  .productsBanner__content {
+  .products__banner__content {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 940px) {
-  .productsBanner__content {
+  .products__banner__content {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .productsBanner__box {
+  .products__banner__box {
     flex-direction: column;
     display: flex;
     text-align: center;
   }
 
-  .productsBanner__box__wrapper {
+  .products__banner__box__wrapper {
     padding: 2rem;
   }
 
-  .productsBanner__box__heading {
+  .products__banner__box__heading {
     font-size: 2.2rem;
   }
 
-  .productsBanner__box__subheading {
+  .products__banner__box__subheading {
     font-size: 1.5rem;
     font-weight: 400;
   }
 
-  .productsBanner__box__description {
+  .products__banner__box__description {
     font-size: 1.2rem;
   }
 
-  .productsBanner__box__image {
+  .products__banner__box__image {
     width: 150px;
   }
 
-  .productsBanner__box__arrow {
+  .products__banner__box__arrow {
     width: 70px;
   }
 
-  .productsBanner__box:hover .productsBanner__box__arrow {
+  .products__banner__box:hover .products__banner__box__arrow {
     top: 33%;
     left: -5%;
   }
 }
 
 @media (max-width: 748px) {
-  .productsBanner__content {
+  .products__banner__content {
     grid-template-columns: 1fr 1fr;
     padding: 4.8rem 2.4rem;
   }
 
-  .productsBanner__box:hover .productsBanner__box__arrow {
+  .products__banner__box:hover .products__banner__box__arrow {
     top: 33%;
     left: 0%;
   }
 
-  .productsBanner__box {
+  .products__banner__box {
     justify-self: center;
     width: 200px;
   }
 }
 
 @media (max-width: 480px) {
-  .productsBanner__content {
+  .products__banner__content {
     grid-template-columns: 1fr;
     padding: 4.8rem 2.4rem;
   }
 
-  .productsBanner__box {
+  .products__banner__box {
     justify-self: center;
     width: 250px;
   }
 
-  .productsBanner__box__wrapper {
+  .products__banner__box__wrapper {
     padding: 2rem 0;
   }
 }
 
 @media (max-width: 320px) {
-  .productsBanner__box {
+  .products__banner__box {
     justify-self: center;
     width: 200px;
   }

@@ -12,3 +12,10 @@
   transform: translateY(1px);
   font-size: 1.8rem;
 }
+
+@media (max-width: 320px) {
+  .timer {
+    padding: 0.4rem 0rem;
+    font-size: 1.6rem;
+  }
+}

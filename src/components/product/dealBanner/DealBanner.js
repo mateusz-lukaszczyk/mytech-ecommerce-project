@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import arrow from "../../../assets/images/arrow.png";
+import christmasLights from "../../../assets/images/christmas-lights.png";
 import stars from "../../../assets/images/stars.png";
 import { insertDecimal } from "../../../utils/constants";
 import { ButtonAddCart } from "../../buttons/buttonAddCart/ButtonAddCart";
@@ -76,6 +77,11 @@ export const DealBanner = ({ dealBannerData }) => {
           {dealBannerFinalData[0].price} $
         </div>
       </div>
+      <Image
+        className={styles.deal__banner__lights}
+        src={christmasLights}
+        alt="Christmas Lights"
+      />
     </section>
   );
 };

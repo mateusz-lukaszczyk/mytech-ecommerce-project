@@ -23,6 +23,7 @@
 
 .features__content__box__description {
   font-size: 1.6rem;
+  line-height: 1.4;
   color: var(--dark-gray);
 }
 

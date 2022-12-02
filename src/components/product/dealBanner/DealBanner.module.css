@@ -131,6 +131,15 @@
   animation-direction: reverse;
 }
 
+.deal__banner__lights {
+  position: absolute;
+  top: -40%;
+  right: 0;
+  transform: rotate(125deg);
+  width: 100px;
+  height: auto;
+}
+
 @keyframes snow {
   to {
     transform: translateY(650px);
@@ -189,6 +198,10 @@
 
   .background__price {
     font-size: 7rem;
+  }
+
+  .deal__banner__lights {
+    top: -60%;
   }
 }
 

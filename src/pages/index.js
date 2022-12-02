@@ -24,8 +24,8 @@ const Home = ({ newProductsData, dealBannerData }) => (
     <Hero />
     <ProductsBanner />
     <NewProducts newProductsData={newProductsData} />
-    <Features />
     <DealBanner dealBannerData={dealBannerData} />
+    <Features />
   </div>
 );
 

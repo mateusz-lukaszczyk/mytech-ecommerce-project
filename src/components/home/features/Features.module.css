@@ -1,13 +1,13 @@
 .features__content {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+  display: grid;
 }
 
 .features__content__box {
-  display: flex;
   align-items: center;
   gap: 1rem;
+  display: flex;
 }
 
 .features__content {
@@ -16,8 +16,8 @@
 }
 
 .features__content__box__title {
-  font-size: 1.9rem;
   margin-bottom: 1.5rem;
+  font-size: 1.9rem;
   color: var(--main-black);
 }
 
@@ -45,8 +45,8 @@
   }
 
   .features__content__box__title {
-    font-size: 1.7rem;
     margin-bottom: 1rem;
+    font-size: 1.7rem;
   }
 
   .features__content__box__description {

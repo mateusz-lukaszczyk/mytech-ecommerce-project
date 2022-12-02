@@ -1,31 +1,32 @@
 .deal__banner__background {
+  position: relative;
   height: 50vh;
   background-image: url(../../../assets/images/deal-banner.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  overflow: hidden;
 }
 
 .deal__banner__content {
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 70%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 1;
 }
 
 .background__price {
   position: absolute;
-  top: 10%;
-  left: -50%;
-  right: -50%;
-  font-weight: 700;
-  opacity: 0.3;
   z-index: -1;
-  color: #c4c4c4;
+  top: 10%;
+  right: -50%;
+  left: -50%;
+  opacity: 0.3;
   font-size: 10rem;
+  font-weight: 700;
+  color: #c4c4c4;
 }
 
 .reviews__stars {
@@ -36,51 +37,51 @@
 }
 
 .deal__banner__subheading {
-  color: var(--dark-gray);
   font-size: 2rem;
+  color: var(--main-red);
 }
 
 .deal__banner__title {
-  color: var(--main-black);
   font-size: 3rem;
+  color: var(--main-black);
 }
 
 .deal__banner__description {
-  color: var(--dark-gray);
-  font-size: 1.4rem;
-  font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-gray);
 }
 
 .deal__banner__price {
   position: relative;
-  font-size: 2.5rem;
-  color: var(--main-blue);
   margin-top: 1rem;
-  font-weight: 600;
   margin-bottom: 1rem;
-}
-
-.deal__banner__discount {
-  font-size: 1.5rem;
-  color: var(--main-red);
-  margin-top: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  color: var(--main-blue);
 }
 
 .deal__banner__old__price__content {
-  display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
+  display: flex;
+}
+
+.deal__banner__discount {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--main-red);
 }
 
 .deal__banner__old__price {
-  color: var(--main-black);
-  font-size: 1.5rem;
   margin-top: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: line-through;
+  color: var(--main-black);
 }
 
 .deal__banner__arrow {
@@ -88,8 +89,52 @@
   bottom: 18%;
   left: -30%;
   width: 100px;
-  transform: rotate(50deg);
   height: auto;
+  transform: rotate(50deg);
+}
+
+.snow,
+.snow::before,
+.snow::after {
+  content: "";
+  position: absolute;
+  top: -650px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: snow 3s linear infinite;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent),
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent),
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent),
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent),
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+}
+
+.snow::after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow::before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
+  }
 }
 
 @media (orientation: landscape) and (max-width: 1024px) {

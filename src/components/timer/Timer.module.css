@@ -1,11 +1,11 @@
 .timer {
+  margin: 0 auto;
+  max-width: 140px;
+  padding: 0.7rem 0rem;
+  border: 1px solid var(--main-blue);
+  background-color: #fff;
   font-size: 2rem;
   font-weight: 600;
-  background-color: #fff;
-  padding: 0.7rem 0rem;
-  max-width: 140px;
-  margin: 0 auto;
-  border: 1px solid var(--main-blue);
 }
 
 .timer__icon {

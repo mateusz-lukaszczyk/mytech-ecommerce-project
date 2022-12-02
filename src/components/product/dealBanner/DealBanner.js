@@ -30,9 +30,9 @@ export const DealBanner = ({ dealBannerData }) => {
   };
 
   const dealBannerFinalData = getValues();
-
   return (
     <section className={styles.deal__banner__background}>
+      <div class={styles.snow}></div>
       <div className={styles.deal__banner__content}>
         <h2 className={styles.deal__banner__subheading}>
           {dealBannerFinalData[0].dealTitle}

@@ -18,9 +18,26 @@
   color: var(--main-black);
 }
 
+.new__products__card__price__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .new__products__card__price {
   font-size: 1.6rem;
   color: var(--main-black);
+}
+
+.new__products__card__old__price {
+  font-size: 1.6rem;
+  text-decoration: line-through;
+  color: var(--dark-gray);
+}
+
+.new__products__card__old__price__hidden {
+  display: none;
 }
 
 .reviews__stars {

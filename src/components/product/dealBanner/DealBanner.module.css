@@ -133,11 +133,11 @@
 
 .deal__banner__lights {
   position: absolute;
-  top: -40%;
   right: 0;
   transform: rotate(125deg);
   width: 100px;
   height: auto;
+  display: none;
 }
 
 @keyframes snow {
@@ -199,9 +199,12 @@
   .background__price {
     font-size: 7rem;
   }
+}
 
+@media (max-width: 768px) {
   .deal__banner__lights {
-    top: -60%;
+    top: -70%;
+    display: block;
   }
 }
 
@@ -217,5 +220,10 @@
 
   .background__price {
     font-size: 5rem;
+  }
+
+  .deal__banner__lights {
+    top: -80%;
+    display: block;
   }
 }

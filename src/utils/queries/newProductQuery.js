@@ -10,7 +10,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -22,7 +21,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -34,7 +32,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -46,7 +43,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -58,7 +54,7 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
+      newProduct
     }
 
     cOMPUTERs(where: { newProduct: true }) {
@@ -69,7 +65,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -81,7 +76,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -93,7 +87,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
 
@@ -105,7 +98,6 @@ export const newProductQuery = gql`
       price
       slug
       title
-      brand
       newProduct
     }
   }

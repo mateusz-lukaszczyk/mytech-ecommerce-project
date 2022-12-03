@@ -9,12 +9,15 @@ import styles from "./ProductCard.module.css";
 export const ProductCard = ({
   title,
   price,
+  oldPrice,
+  discountPercent,
   slug,
   image,
   isProductNew,
   isProductSale,
 }) => {
   price = insertDecimal(price);
+  oldPrice = insertDecimal(oldPrice);
 
   return (
     <div className={styles.new__products__card__box}>
@@ -35,7 +38,18 @@ export const ProductCard = ({
         className={styles.reviews__stars}
         alt="reviews stars"
       />
-      <p className={styles.new__products__card__price}>${price}</p>
+      <div className={styles.new__products__card__price__wrapper}>
+        <p className={styles.new__products__card__price}>${price}</p>
+        <p
+          className={
+            isProductSale
+              ? styles.new__products__card__old__price
+              : styles.new__products__card__old__price__hidden
+          }
+        >
+          ${oldPrice}
+        </p>
+      </div>
       <ButtonAddCart />
       <Image
         className={styles.new__products__card__arrow}
@@ -51,7 +65,7 @@ export const ProductCard = ({
             : styles.new__products__card__regular__tag
         }
       >
-        {isProductNew ? "NEW" : isProductSale && "ON SALE"}
+        {isProductNew ? "NEW" : isProductSale && `- ${discountPercent} %`}
       </span>
     </div>
   );

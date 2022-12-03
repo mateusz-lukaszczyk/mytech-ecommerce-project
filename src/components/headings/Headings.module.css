@@ -1,0 +1,24 @@
+.headings__wrapper {
+  text-align: center;
+}
+
+.headings__heading {
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--main-black);
+}
+
+.headings__description {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--dark-gray);
+}
+
+.headings__arrow {
+  margin-bottom: 2.4rem;
+  width: 70px;
+  height: auto;
+  transform: rotate(120deg);
+}

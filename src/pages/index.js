@@ -5,6 +5,7 @@ import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import { GraphQLClient } from "graphql-request";
+import { Faq } from "../components/home/faq/Faq";
 import { Features } from "../components/home/features/Features";
 import { Hero } from "../components/home/hero/Hero";
 import { Testimonials } from "../components/home/testimonials/Testimonials";
@@ -31,6 +32,7 @@ const Home = ({ newProductsData, dealBannerData, saleProductsData }) => (
     <Features />
     <SaleProducts saleProductsData={saleProductsData} />
     <Testimonials />
+    <Faq />
   </div>
 );
 

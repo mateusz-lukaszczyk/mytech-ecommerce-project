@@ -5,10 +5,8 @@
 }
 
 .testimonials__box {
-  justify-content: center;
-  align-items: center;
   display: flex;
-  gap: 9rem;
+  gap: 15rem;
 }
 
 .testimonials__box__review {
@@ -99,6 +97,8 @@
   .testimonials__box__content {
     order: 1;
     padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .testimonials__box__review {
